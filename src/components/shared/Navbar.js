@@ -15,6 +15,7 @@ import Stack from '@mui/material/Stack';
 // icons
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import Header from "./Header";
 
 const navItems = [
   {
@@ -45,7 +46,9 @@ const navItems = [
 
 function Navbar() {
   return (
-    <AppBar position="static" className="bg-black">
+    <>
+    <Header />
+      <AppBar position="static" className="bg-black">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Image src={logo} width={100} height={100} alt="logo" />
@@ -75,6 +78,7 @@ function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
+    </>
   );
 }
 export default Navbar;
